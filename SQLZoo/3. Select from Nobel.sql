@@ -25,4 +25,6 @@ SELECT winner FROM nobel WHERE winner LIKE 'John%';
 SELECT * FROM nobel WHERE (subject = 'chemistry' AND yr = 1984) OR (subject = 'physics' AND yr = 1980);
 
 #9
+SELECT * FROM nobel WHERE yr = 1980 AND subject NOT IN ('Chemistry', 'Medicine')
+
 
