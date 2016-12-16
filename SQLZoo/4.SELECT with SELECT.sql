@@ -11,3 +11,6 @@ SELECT name, continent FROM world WHERE continent IN (SELECT continent FROM worl
 
 #4
 SELECT name, population FROM world  WHERE population > (SELECT population FROM world WHERE name = 'Canada') AND  population < (SELECT population FROM world WHERE name = 'Poland');
+
+#5
+SELECT name, CONCAT(ROUND((population*100)/(SELECT population FROM world WHERE name='Germany'), 0), '%')FROM world WHERE population IN (SELECT population FROM world WHERE continent='Europe')
