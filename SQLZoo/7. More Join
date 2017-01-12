@@ -42,3 +42,9 @@ FROM actor
 JOIN movie ON (movie.id = actor.id)
 WHERE title = 'Casablanca’;
 
+#8 - fix 
+SELECT name
+FROM actor
+JOIN movie ON (movie.id = actor.id)
+JOIN casting ON (movieid = actor.id)
+WHERE title = 'Alien';
