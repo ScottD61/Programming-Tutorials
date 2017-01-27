@@ -19,3 +19,26 @@ FROM teacher RIGHT JOIN dept
 ON (teacher.dept = dept.id);
 
 #5
+SELECT name, COALESCE(mobile, '07986 444 2266') 
+FROM teacher;
+
+#6
+SELECT COALESCE(teacher.name, 'NONE'), COALESCE(dept.name, 'None')
+FROM teacher 
+LEFT JOIN dept ON (teacher.dept = dept.id);
+
+#7
+SELECT COUNT(Name), COUNT(mobile)
+FROM teacher;
+
+#8
+SELECT dept.name, COUNT(teacher.name)
+FROM teacher
+RIGHT JOIN dept ON (teacher.dept = dept.id)
+GROUP BY dept.name;
+
+#9
+
+
+
+Use COUNT and GROUP BY dept.name to show each department and the number of staff. Use a RIGHT JOIN to ensure that the Engineering department is listed.
