@@ -38,7 +38,18 @@ RIGHT JOIN dept ON (teacher.dept = dept.id)
 GROUP BY dept.name;
 
 #9
+SELECT teacher.name,
+CASE WHEN dept.id = 1 THEN 'Sci'
+WHEN dept.id = 2 THEN 'Sci'
+ELSE 'Art' END
+FROM teacher 
+LEFT JOIN dept ON (teacher.dept = dept.id)
 
-
-
-Use COUNT and GROUP BY dept.name to show each department and the number of staff. Use a RIGHT JOIN to ensure that the Engineering department is listed.
+#10
+SELECT teacher.name,
+CASE WHEN dept.id = 1 THEN 'Sci'
+WHEN dept.id = 2 THEN 'Sci'
+WHEN dept.id = 3 THEN 'Art'
+ELSE 'None' END
+FROM teacher 
+LEFT JOIN dept ON (teacher.dept = dept.id)
