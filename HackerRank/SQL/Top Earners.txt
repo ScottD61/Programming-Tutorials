@@ -1,0 +1,6 @@
+SELECT (Salary * Months) AS Maximum, COUNT(*)
+FROM Employee
+GROUP BY Maximum
+ORDER BY Maximum DESC 
+LIMIT 1;
+
